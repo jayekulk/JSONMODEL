@@ -3,7 +3,7 @@
 		<pages>
 			<Page title="{i18n>title}">
 				<content>
-						<Label text="Capgemini" id="label"/>
+						<Label text="Capgemini India" id="label"/>
 					<Label text="India" class="background"/>
 				
 				    <Table  class="column" noDataText="Drop column list items here and columns in the area above" id="table0" items="{Product>/ProductCollection}">
