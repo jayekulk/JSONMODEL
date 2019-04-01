@@ -1,0 +1,44 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="json.JSONMODEL.controller.View1" displayBlock="true">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+						<Label text="Capgemini" id="label"/>
+					<Label text="India" class="background"/>
+				
+				    <Table  class="column" noDataText="Drop column list items here and columns in the area above" id="table0" items="{Product>/ProductCollection}">
+				        <items>
+				            <ColumnListItem type="Active" id="item0" class="column">
+				                <cells>
+				                    <Text text="{Product>ProductId}" id="text3"/>
+				                    <Text text="{Product>Name}" id="text4"/>
+				                    <ObjectStatus text="{Product>Status}" id="text5" state="{= ${Product>Price} > 30 ? 'Error' : 'Success' }"/>
+				                     <Text text="{path:'Product>Date',formatter:'.formatter.date'}" id="text6"/></cells>
+				            </ColumnListItem>
+				        </items>
+				        <columns class="column">
+				            <Column id="column0" class="column">
+				                <header class="column">
+				                    <Label text="Header 1" id="label0" class="column"/>
+				                </header>
+				            </Column>
+				            <Column id="column1" class="column">
+				                <header>
+				                    <Label text="Header 2" id="label1"/>
+				                </header>
+				            </Column>
+				            <Column id="column2" class="column">
+				                <header>
+				                    <Label text="Header 3" id="label2"/>
+				                </header>
+				            </Column>
+				            				            <Column id="column3" class="column">
+				                <header>
+				                    <Label text="Header 4" id="label3"/>
+				                </header>
+				            </Column></columns></Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
